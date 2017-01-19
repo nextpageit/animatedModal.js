@@ -41,7 +41,7 @@
         }, options);
 
         var closeBtSel = '.close-' + settings.modalTarget;
-        var closeBt = $(closeBtSel);
+        //var closeBt = $(closeBtSel);
 
         //console.log(closeBt)
 
@@ -115,8 +115,6 @@
                 id.addClass(settings.animatedOut);
                 id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterClose);
             }
-            ;
-
         });
 
         function afterClose() {
