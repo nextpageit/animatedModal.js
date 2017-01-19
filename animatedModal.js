@@ -100,7 +100,7 @@
         });
 
 
-        $(body).on("click", closeBtSel, function (event) {
+        $("body").on("click", closeBtSel, function (event) {
             event.preventDefault();
             $('body, html').css({'overflow': 'auto'});
 
