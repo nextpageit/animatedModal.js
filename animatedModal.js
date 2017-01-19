@@ -42,7 +42,7 @@
 
         var closeBtSel = '.close-' + settings.modalTarget;
         //var closeBt = $(closeBtSel);
-
+        var contentSel = ".animated-modal-content";
         //console.log(closeBt)
 
         var href = '#animatedModal',
@@ -88,7 +88,7 @@
                     var url = ctrl.data("ajax");
                     if (typeof(url) != "undefined" && url.length > 0)
                         $.get(url, null, function (data) {
-                            $(".animated-modal-content").html(data);
+                            $(contentSel).html(data);
                         })
                     settings.beforeOpen();
                     id.css({'opacity': settings.opacityIn, 'z-index': settings.zIndexIn});
@@ -100,7 +100,7 @@
         });
 
 
-        $('body').on('click', closeBtSel, function (event) {
+        $("body").on("click", closeBtSel, function (event) {
             event.preventDefault();
             $('body, html').css({'overflow': 'auto'});
 
@@ -119,6 +119,7 @@
 
         function afterClose() {
             id.css({'z-index': settings.zIndexOut});
+            $(contentSel).html("");
             settings.afterClose(); //afterClose
         }
 
