@@ -1,6 +1,6 @@
-/*=========================================
+   /*=========================================
      * animatedModal.js: Version 1.0
-     * author: João Pereira, Updated by Nitin Dhiman
+     * author: João Pereira
      * website: http://www.joaopereira.pt
      * email: joaopereirawd@gmail.com
      * Licensed MIT
@@ -87,7 +87,7 @@
                         var url = ctrl.data("ajax");
                         if (typeof(url) != "undefined" && url.length > 0)
                             $.get(url, null, function (data) {
-                                $(".modal-content").html(data);
+                                $(".animated-modal-content").html(data.base);
                             })
                         settings.beforeOpen();
                         id.css({'opacity': settings.opacityIn, 'z-index': settings.zIndexIn});
@@ -120,7 +120,7 @@
 
             function afterClose() {
                 id.css({'z-index': settings.zIndexOut});
-                settings.afterClose();  //afterClose
+                settings.afterClose(); //afterClose
             }
 
             function afterOpen() {
