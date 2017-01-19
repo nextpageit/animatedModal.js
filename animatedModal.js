@@ -87,7 +87,7 @@
                         var url = ctrl.data("ajax");
                         if (typeof(url) != "undefined" && url.length > 0)
                             $.get(url, null, function (data) {
-                                $(".animated-modal-content").html(data.base);
+                                $(".animated-modal-content").html(data);
                             })
                         settings.beforeOpen();
                         id.css({'opacity': settings.opacityIn, 'z-index': settings.zIndexIn});
