@@ -1,8 +1,8 @@
 /*=========================================
- * animatedModal.js: Version 1.0
- * author: João Pereira
- * website: http://www.joaopereira.pt
- * email: joaopereirawd@gmail.com
+ * animatedModal.js: Version 2.0
+ * author: Nitin Dhiman, based on - João Pereira
+ * website: http://www.nextpageit.com
+ * email: nitin@nextpageit.com
  * Licensed MIT
  =========================================*/
 
