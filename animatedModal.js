@@ -89,11 +89,13 @@
                     if (typeof(url) != "undefined" && url.length > 0)
                         $.get(url, null, function (data) {
                             $(contentSel).html(data);
+                         
+                           settings.beforeOpen();
+                           id.css({'opacity': settings.opacityIn, 'z-index': settings.zIndexIn});
+                           id.addClass(settings.animatedIn);
+                           id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterOpen);
                         })
-                    settings.beforeOpen();
-                    id.css({'opacity': settings.opacityIn, 'z-index': settings.zIndexIn});
-                    id.addClass(settings.animatedIn);
-                    id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterOpen);
+                    
                 }
                 ;
             }
